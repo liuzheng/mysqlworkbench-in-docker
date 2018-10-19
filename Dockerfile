@@ -15,7 +15,8 @@ RUN apt-get update \
     && dpkg -i mysql-workbench.deb \
     || apt-get update \
     && apt --fix-broken install \
-    && rm -rf /var/lib/apt/lists/*
+    && rm -rf /var/lib/apt/lists/* \
+    && rm mysql-workbench.deb
 
 RUN set -xe \
     && useradd -u 1000 -g 100 -G sudo --shell /bin/bash --no-create-home --home-dir /tmp user \
