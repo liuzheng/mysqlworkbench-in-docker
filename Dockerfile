@@ -11,6 +11,7 @@ RUN apt-get update \
     supervisor \
     ttf-wqy-microhei \
     wget \
+    awesome \
     && wget -O mysql-workbench.deb https://dev.mysql.com/get/Downloads/MySQLGUITools/mysql-workbench-community_8.0.12-1ubuntu18.04_amd64.deb \
     && dpkg -i mysql-workbench.deb \
     || apt-get update \
